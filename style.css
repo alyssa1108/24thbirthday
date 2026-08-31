@@ -1,121 +1,35 @@
 body {
-  font-family: 'Great Vibes', cursive;
   background-color: #0b3d2e; /* forest green */
-  color: gold;
-  text-align: center;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#flipbook {
+  width: 550px;   /* smaller width */
+  height: 750px;  /* shorter height */
+  margin: auto;
+  box-shadow: 0 0 20px rgba(212,175,55,0.3); /* subtle antique gold shadow */
 }
 
 .page {
-  display: none;
-  padding: 50px;
-}
-
-.active {
-  display: block;
-}
-
-/* Cover Page Styling */
-#cover {
-  background: radial-gradient(circle at center, #0b3d2e 60%, #06261c 100%);
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 12px solid gold;
-  box-shadow: 0 0 40px gold;
-}
-
-#cover h1 {
-  font-size: 60px;
-  margin-bottom: 10px;
-  text-shadow: 0 0 10px gold;
-}
-
-#cover .heart {
-  font-size: 80px;
-  color: gold;
-  margin-bottom: 20px;
-  text-shadow: 0 0 15px gold;
-}
-
-button {
-  background-color: gold;
-  color: #0b3d2e;
-  border: none;
-  padding: 12px 24px;
-  font-size: 20px;
-  cursor: pointer;
-  border-radius: 8px;
-  font-family: 'Georgia', serif;
-  box-shadow: 0 0 10px gold;
-}
-
-input {
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid gold;
-}
-
-img {
-  max-width: 80%;
-  border: 5px solid gold;
-  margin-top: 20px;
-  box-shadow: 0 0 20px gold;
-body {
-  background-color: #0b3d2e; /* forest green background */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-#book {
-  perspective: 2000px;
-  width: 600px;   /* slimmer width */
-  height: 850px;  /* taller height */
-  position: relative;
-}
-
-#cover {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  transform-origin: left center;
-  transition: transform 2s ease;
-  z-index: 2;
-}
-
-#cover img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: 6px solid #d4af37; /* antique gold */
-  box-shadow: 0 0 15px rgba(212,175,55,0.4); /* softer glow */
-}
-
-#pages {
-  background: white;
-  width: 100%;
-  height: 100%;
+  width: 275px;   /* half width for each page */
+  height: 750px;
+  background: #fff;
   border: 4px solid #d4af37; /* antique gold */
-  box-shadow: 0 0 12px rgba(212,175,55,0.3); /* subtle glow */
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  box-shadow: 0 0 10px rgba(212,175,55,0.25);
+  text-align: center;
   padding: 20px;
 }
 
-.page {
-  display: none;
-  text-align: center;
+.cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 6px solid #d4af37;
+  box-shadow: 0 0 12px rgba(212,175,55,0.3);
+  cursor: pointer;
 }
 
-.page.active {
-  display: block;
-}
 
