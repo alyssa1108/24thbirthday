@@ -4,33 +4,33 @@
   <meta charset="UTF-8">
   <title>Memory Book</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
 </head>
 <body>
 
-<div id="book">
+<div id="flipbook">
   <!-- Cover -->
-  <div id="cover">
-    <img src="cover.png" alt="Memory Book Cover">
+  <div class="page cover">
+    <img src="cover.png" alt="Memory Book Cover" onclick="openCover()">
   </div>
 
-  <!-- Inside Pages -->
-  <div id="pages">
-    <!-- Password Page -->
-    <div class="page" id="passwordPage">
-      <h2>Enter Password</h2>
-      <input type="password" id="passwordInput" placeholder="Password">
-      <button onclick="checkPassword()">Unlock</button>
-      <p id="error"></p>
-    </div>
-
-    <!-- Scrapbook Pages -->
-    <div class="page locked"><img src="pic01.png" alt="Memory 1"></div>
-    <div class="page locked"><img src="pic02.png" alt="Memory 2"></div>
-    <div class="page locked"><img src="pic03.png" alt="Memory 3"></div>
+  <!-- Password Page -->
+  <div class="page" id="passwordPage">
+    <h2>Enter Password</h2>
+    <input type="password" id="passwordInput" placeholder="Password">
+    <button onclick="checkPassword()">Unlock</button>
+    <p id="error"></p>
   </div>
+
+  <!-- Scrapbook Pages -->
+  <div class="page locked"><img src="pic01.png" alt="Memory 1"></div>
+  <div class="page locked"><img src="pic02.png" alt="Memory 2"></div>
+  <div class="page locked"><img src="pic03.png" alt="Memory 3"></div>
 </div>
 
 <script src="script.js"></script>
 </body>
 </html>
+
 
